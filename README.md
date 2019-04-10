@@ -3,4 +3,5 @@
 ## Bibliotecas e frameworks instalados
 
 - Back-end
-Nodemon
+-- Nodemon
+-- Mongoose
