@@ -1,5 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const path = require('path');
 
 const app = express();
 
@@ -9,6 +10,8 @@ mongoose.connect('mongodb+srv://omnistack:omnistack@cluster0-6rvus.mongodb.net/o
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+app.use('/files', express.static(path.resolve(__dirname, '..', 'tmp')));
 
 app.use(require('./routes'));
 
